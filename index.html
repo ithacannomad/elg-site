@@ -1,11 +1,29 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Elg, a film camera for iPhone. Coming soon.</title><link rel="icon" href="icon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0C0B0A;color:#F6EEE3;font:16px/1.5 Inter,system-ui,sans-serif;text-align:center}
-main{max-width:420px;padding:48px 24px}img{width:112px;border-radius:24px}h1{font:600 2rem/1.2 Fraunces,serif;margin:32px 0 12px}
-p{opacity:.8;margin:0 0 32px}a.btn{display:inline-block;background:#FFC46B;color:#0C0B0A;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:500}
-small{display:block;margin-top:12px;opacity:.6}footer{margin-top:64px;font-size:14px;opacity:.6}footer a{color:inherit}</style></head>
-<body><main><img src="icon.svg" alt="Elg app icon"><h1>Shoot a roll. Develop it later.</h1>
-<p>Elg is a film camera for your iPhone. It shoots RAW with real film looks, every frame counts, and you can re-develop your shots in the darkroom.</p>
-<a class="btn" href="mailto:help@elg.pics?subject=Notify%20me%20when%20Elg%20launches">Notify me</a><small>Get a note when Elg launches.</small>
-<footer>Questions? <a href="mailto:help@elg.pics">help@elg.pics</a></footer></main></body></html>
+<title>Elg — Every frame counts.</title><meta name="description" content="Elg is a film camera for iPhone. Coming soon."><link rel="icon" href="icon.svg">
+<meta property="og:title" content="Elg — Every frame counts."><meta name="theme-color" content="#0C0B0A">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>:root{--bg:#0C0B0A;--fg:#F6EEE3;--y:#FFC46B;--mute:#9b9186;--line:#2a2622}*{box-sizing:border-box}
+html{background:var(--bg)}body{margin:0;color:var(--fg);font:16px/1.6 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.d{font-family:Fraunces,Georgia,serif;font-weight:400;font-variation-settings:'opsz' 9,'SOFT' 0,'WONK' 0;letter-spacing:-.01em;line-height:1.08;margin:0}
+.mono{font-family:'Space Mono',ui-monospace,monospace;letter-spacing:.18em;font-size:12px;text-transform:uppercase;color:var(--mute)}
+.ico{border-radius:22.37%;display:block} a{color:inherit} .mute{color:var(--mute)}
+form{display:flex;gap:8px;max-width:420px;width:100%} input{flex:1;min-width:0;background:#171513;border:1px solid var(--line);color:var(--fg);border-radius:999px;padding:13px 18px;font:inherit}
+input:focus{outline:none;border-color:var(--y)} button,.btn{background:var(--y);color:var(--bg);border:0;border-radius:999px;padding:13px 22px;font:500 15px Inter,sans-serif;cursor:pointer;text-decoration:none;white-space:nowrap;display:inline-block}
+.counter{display:flex;align-items:center;gap:12px;color:var(--y)} .counter i{width:7px;height:7px;border-radius:50%;background:var(--y)} .counter b{display:block;width:120px;height:1px;background:var(--y);opacity:.5}
+
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 24px}
+.vf{position:fixed;inset:28px;pointer-events:none} .vf span{position:absolute;width:28px;height:28px;border-color:#3a3530;border-style:solid;border-width:0}
+.vf .a{left:0;top:0;border-left-width:1px;border-top-width:1px}.vf .b{right:0;top:0;border-right-width:1px;border-top-width:1px}
+.vf .c{left:0;bottom:0;border-left-width:1px;border-bottom-width:1px}.vf .e{right:0;bottom:0;border-right-width:1px;border-bottom-width:1px}
+main{max-width:520px;width:100%;display:flex;flex-direction:column;align-items:center}
+h1{font-size:clamp(44px,7vw,76px);margin:28px 0 18px} .sub{font-size:19px;margin:0 0 18px;color:#d8cfc3} p.body{color:var(--mute);margin:0 0 32px;max-width:440px}
+small{margin-top:12px;color:var(--mute);font-size:13px} footer{position:fixed;bottom:44px;left:0;right:0;font-size:13px;color:var(--mute)}
+.meta{position:fixed;top:44px;left:56px;right:56px;display:flex;justify-content:space-between}
+@media(max-width:600px){.vf{inset:14px}.meta{top:28px;left:32px;right:32px}footer{position:static;margin-top:48px}body{justify-content:flex-start;padding-top:96px}}
+</style></head><body><div class="vf"><span class="a"></span><span class="b"></span><span class="c"></span><span class="e"></span></div>
+<div class="meta mono"><span>elg.pics</span><span class="counter"><i></i>24</span></div>
+<main><img class="ico" src="icon.svg" width="104" height="104" alt="Elg app icon"><h1 class="d">Every frame counts.</h1>
+<p class="sub d">Shoot a roll. Develop it later.</p>
+<p class="body">Elg is a film camera for your iPhone. It shoots RAW with real film looks, and you can re-develop your shots in the darkroom.</p>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"><input type="email" name="email" placeholder="you@email.com" required aria-label="Email"><button type="submit">Notify me</button></form><small>Get a note when Elg launches.</small></main>
+<footer>Questions? <a href="mailto:help@elg.pics">help@elg.pics</a></footer></body></html>
