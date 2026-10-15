@@ -11,15 +11,20 @@ form{display:flex;gap:8px;max-width:420px;width:100%} input{flex:1;min-width:0;b
 input:focus{outline:none;border-color:var(--y)} button,.btn{background:var(--y);color:var(--bg);border:0;border-radius:999px;padding:13px 22px;font:500 15px Inter,sans-serif;cursor:pointer;text-decoration:none;white-space:nowrap;display:inline-block}
 .counter{display:flex;align-items:center;gap:12px;color:var(--y)} .counter i{width:7px;height:7px;border-radius:50%;background:var(--y)} .counter b{display:block;width:120px;height:1px;background:var(--y);opacity:.5}
 
-body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 24px}
-.vf{position:fixed;inset:28px;pointer-events:none} .vf span{position:absolute;width:28px;height:28px;border-color:#3a3530;border-style:solid;border-width:0}
+html,body{height:100%}
+body{height:100vh;height:100svh;min-height:100vh;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(56px,9svh,96px) 24px clamp(40px,7svh,80px)}
+@supports(height:100dvh){body{height:100dvh;min-height:100dvh}}
+.vf{position:fixed;inset:clamp(12px,3.2svh,28px);pointer-events:none} .vf span{position:absolute;width:28px;height:28px;border-color:#3a3530;border-style:solid;border-width:0}
 .vf .a{left:0;top:0;border-left-width:1px;border-top-width:1px}.vf .b{right:0;top:0;border-right-width:1px;border-top-width:1px}
 .vf .c{left:0;bottom:0;border-left-width:1px;border-bottom-width:1px}.vf .e{right:0;bottom:0;border-right-width:1px;border-bottom-width:1px}
-main{max-width:520px;width:100%;display:flex;flex-direction:column;align-items:center}
-h1{font-size:clamp(44px,7vw,76px);margin:28px 0 18px} .sub{font-size:19px;margin:0 0 18px;color:#d8cfc3} p.body{color:var(--mute);margin:0 0 32px;max-width:440px}
-small{margin-top:12px;color:var(--mute);font-size:13px} footer{position:fixed;bottom:44px;left:0;right:0;font-size:13px;color:var(--mute)}
-.meta{position:fixed;top:44px;left:56px;right:56px;display:flex;justify-content:space-between}
-@media(max-width:600px){.vf{inset:14px}.meta{top:28px;left:32px;right:32px}footer{position:static;margin-top:48px}body{justify-content:flex-start;padding-top:96px}}
+main{flex:1 1 auto;min-height:0;max-width:520px;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ico{width:clamp(60px,12svh,104px);height:auto}
+h1{font-size:clamp(34px,min(11vw,8.5svh),76px);margin:clamp(14px,3.2svh,28px) 0 clamp(8px,2svh,18px)} .sub{font-size:clamp(16px,2.6svh,19px);margin:0 0 clamp(8px,2svh,18px);color:#d8cfc3}
+p.body{color:var(--mute);margin:0 0 clamp(14px,3.6svh,32px);max-width:440px;font-size:clamp(14px,2.2svh,16px);line-height:1.5}
+small{margin-top:clamp(8px,1.5svh,12px);color:var(--mute);font-size:13px} footer{flex:none;font-size:13px;color:var(--mute);margin-top:clamp(10px,2svh,24px)}
+.meta{position:fixed;top:clamp(24px,5.5svh,44px);left:56px;right:56px;display:flex;justify-content:space-between}
+@media(max-width:600px){.meta{left:32px;right:32px}}
+@media(max-height:620px){input,button{padding-top:10px;padding-bottom:10px}.mono{font-size:11px}}
 </style></head><body><div class="vf"><span class="a"></span><span class="b"></span><span class="c"></span><span class="e"></span></div>
 <div class="meta mono"><span>elg.pics</span><span class="counter"><i></i>24</span></div>
 <main><img class="ico" src="icon.svg" width="104" height="104" alt="Elg app icon"><h1 class="d">Every frame counts.</h1>
