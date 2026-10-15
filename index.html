@@ -12,7 +12,7 @@ input:focus{outline:none;border-color:var(--y)} button,.btn{background:var(--y);
 .counter{display:flex;align-items:center;gap:12px;color:var(--y)} .counter i{width:7px;height:7px;border-radius:50%;background:var(--y)} .counter b{display:block;width:120px;height:1px;background:var(--y);opacity:.5}
 
 html,body{height:100%}
-body{height:100vh;height:100svh;min-height:100vh;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(56px,9svh,96px) 24px clamp(40px,7svh,80px)}
+body{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(56px,9svh,96px) 24px clamp(40px,7svh,80px)}
 @supports(height:100dvh){body{height:100dvh;min-height:100dvh}}
 .vf{position:fixed;inset:clamp(12px,3.2svh,28px);pointer-events:none} .vf span{position:absolute;width:28px;height:28px;border-color:#3a3530;border-style:solid;border-width:0}
 .vf .a{left:0;top:0;border-left-width:1px;border-top-width:1px}.vf .b{right:0;top:0;border-right-width:1px;border-top-width:1px}
